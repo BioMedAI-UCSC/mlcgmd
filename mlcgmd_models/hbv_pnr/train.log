@@ -1,0 +1,562 @@
+[2024-01-31 18:54:07,661][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-01-31 19:04:54,954][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-01-31 19:04:54,983][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-01-31 19:04:55,496][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-01-31 19:04:55,496][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-01-31 19:04:55,508][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-01-31 19:04:55,512][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-01-31 19:05:30,327][hydra.utils][INFO] - Instantiating the Trainer
+[2024-01-31 19:06:58,268][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-01-31 19:06:58,502][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-01-31 19:06:58,557][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-01-31 19:06:58,557][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-01-31 19:06:58,562][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-01-31 19:06:58,565][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-01-31 19:07:01,536][hydra.utils][INFO] - Instantiating the Trainer
+[2024-01-31 19:07:01,788][hydra.utils][INFO] - Starting training!
+[2024-01-31 19:07:01,824][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2024-01-31 19:07:01,824][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+[2024-01-31 19:08:13,888][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-01-31 19:08:13,909][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-01-31 19:08:13,963][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-01-31 19:08:13,964][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-01-31 19:08:13,968][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-01-31 19:08:13,972][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-01-31 19:08:52,210][hydra.utils][INFO] - Instantiating the Trainer
+[2024-01-31 19:23:32,343][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-01-31 19:23:32,366][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-01-31 19:23:32,421][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-01-31 19:23:32,422][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-01-31 19:23:32,426][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-01-31 19:23:32,429][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-01-31 19:23:52,062][hydra.utils][INFO] - Instantiating the Trainer
+[2024-01-31 19:23:52,314][hydra.utils][INFO] - Starting training!
+[2024-01-31 19:23:52,317][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2024-01-31 19:23:52,317][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+[2024-02-04 15:18:33,733][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 15:18:33,768][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 15:18:34,257][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 15:18:34,257][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 15:18:34,277][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 15:18:34,281][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 15:21:55,676][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 15:21:55,698][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 15:21:55,754][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 15:21:55,754][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 15:21:55,758][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 15:21:55,762][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 15:23:02,202][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 15:23:02,235][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 15:23:02,300][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 15:23:02,301][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 15:23:02,304][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 15:23:02,308][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 15:23:04,659][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-04 15:23:04,983][hydra.utils][INFO] - Starting training!
+[2024-02-04 15:25:33,115][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 15:25:33,137][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 15:25:33,194][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 15:25:33,195][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 15:25:33,199][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 15:25:33,202][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 15:27:19,581][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 15:27:19,601][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 15:27:19,658][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 15:27:19,659][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 15:27:19,663][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 15:27:19,666][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 15:30:13,035][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 15:30:13,057][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 15:30:13,114][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 15:30:13,115][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 15:30:13,118][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 15:30:13,124][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 15:31:24,722][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 15:31:24,747][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 15:31:25,255][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 15:31:25,256][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 15:31:25,264][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 15:31:25,268][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 15:31:30,923][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-04 15:31:31,256][hydra.utils][INFO] - Starting training!
+[2024-02-04 15:36:53,091][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 15:36:53,113][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 15:36:53,169][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 15:36:53,169][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 15:36:53,174][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 15:36:53,177][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 15:37:38,646][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 15:37:38,666][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 15:37:38,722][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 15:37:38,722][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 15:37:38,727][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 15:37:38,731][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 15:40:29,756][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 15:40:29,973][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 15:40:30,029][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 15:40:30,029][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 15:40:30,370][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 15:40:30,374][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 15:43:40,744][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 15:43:40,765][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 15:43:40,823][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 15:43:40,823][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 15:43:40,827][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 15:43:40,831][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 15:46:35,608][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 15:46:35,628][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 15:46:35,685][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 15:46:35,685][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 15:46:35,689][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 15:46:35,692][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 15:47:45,007][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 15:47:45,029][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 15:47:45,087][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 15:47:45,087][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 15:47:45,091][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 15:47:45,095][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 15:53:13,409][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 15:53:13,429][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 15:53:13,486][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 15:53:13,486][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 15:53:13,490][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 15:53:13,493][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 15:53:18,957][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-04 15:55:51,443][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 15:55:51,471][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 15:55:52,108][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 15:55:52,109][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 15:55:52,118][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 15:55:52,122][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 15:55:56,822][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-04 15:55:57,176][hydra.utils][INFO] - Starting training!
+[2024-02-04 15:58:38,809][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 15:58:38,838][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 15:58:39,370][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 15:58:39,370][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 15:58:39,380][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 15:58:39,384][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 15:58:45,128][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-04 15:58:45,546][hydra.utils][INFO] - Starting training!
+[2024-02-04 16:11:28,813][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 16:11:28,836][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 16:11:28,892][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 16:11:28,892][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 16:11:28,896][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 16:11:28,900][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 16:11:31,413][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-04 16:11:31,743][hydra.utils][INFO] - Starting training!
+[2024-02-04 16:24:30,807][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-04 16:24:30,829][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-04 16:24:30,886][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-04 16:24:30,887][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-04 16:24:30,890][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-04 16:24:30,894][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-04 16:24:33,412][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-04 16:24:33,744][hydra.utils][INFO] - Starting training!
+[2024-02-07 12:51:27,020][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-07 12:51:27,055][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-07 12:51:27,583][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-07 12:51:27,583][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-07 12:51:27,593][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-07 12:51:27,597][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-07 12:52:06,174][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-07 12:52:06,530][hydra.utils][INFO] - Starting training!
+[2024-02-07 13:22:37,150][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-07 13:22:37,175][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-07 13:22:37,632][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-07 13:22:37,632][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-07 13:22:37,643][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-07 13:22:37,646][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-07 13:22:43,480][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-07 13:22:43,862][hydra.utils][INFO] - Starting training!
+[2024-02-07 13:53:25,459][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-07 13:53:25,481][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-07 13:53:25,539][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-07 13:53:25,539][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-07 13:53:25,543][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-07 13:53:25,546][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-07 13:53:27,656][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-07 13:53:27,928][hydra.utils][INFO] - Starting training!
+[2024-02-07 13:56:10,433][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-07 13:58:06,553][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-07 13:58:06,574][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-07 13:58:06,628][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-07 13:58:06,628][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-07 13:58:06,632][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-07 13:58:06,635][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-07 13:58:08,693][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-07 13:58:08,963][hydra.utils][INFO] - Starting training!
+[2024-02-07 14:02:37,982][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-07 14:02:38,002][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-07 14:02:38,056][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-07 14:02:38,056][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-07 14:02:38,060][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-07 14:02:38,063][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-07 14:02:40,143][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-07 14:02:40,408][hydra.utils][INFO] - Starting training!
+[2024-02-07 18:08:49,472][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-07 18:08:49,506][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-07 18:08:50,106][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-07 18:08:50,106][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-07 18:08:50,132][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-07 18:08:50,135][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-07 18:09:11,124][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-07 18:09:11,645][hydra.utils][INFO] - Starting training!
+[2024-02-07 18:10:20,590][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-07 18:10:20,612][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-07 18:10:20,668][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-07 18:10:20,670][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-07 18:10:20,674][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-07 18:10:20,678][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-07 18:10:40,960][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-07 18:10:41,348][hydra.utils][INFO] - Starting training!
+[2024-02-07 18:14:08,430][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-07 18:14:08,453][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-07 18:14:08,508][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-07 18:14:08,508][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-07 18:14:08,513][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-07 18:14:08,516][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-07 18:14:10,657][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-07 18:14:11,043][hydra.utils][INFO] - Starting training!
+[2024-02-07 18:44:14,425][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2024-02-07 18:44:24,429][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:44:34,431][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:44:44,431][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:44:54,437][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:45:04,438][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:45:14,439][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:45:17,370][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-07 18:45:24,440][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:45:34,444][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:45:44,445][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:45:54,448][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:46:04,449][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:46:14,450][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:46:24,451][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:46:34,453][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:46:44,454][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:46:54,455][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:47:04,457][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:47:14,458][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:47:24,459][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:47:34,460][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:47:44,462][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:47:54,463][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:48:04,464][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:48:14,465][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:48:24,466][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:48:34,468][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:48:44,470][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:48:54,471][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:49:04,472][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:49:14,474][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:49:24,476][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:49:34,477][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:49:44,478][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:49:54,479][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:50:04,481][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:50:14,485][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:50:24,487][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:50:34,488][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:50:44,491][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:50:54,493][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:51:04,494][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:51:14,494][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:51:24,495][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:51:34,496][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:51:44,497][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:51:54,498][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:52:04,499][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:52:14,500][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:52:20,590][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-07 18:52:20,613][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-07 18:52:21,071][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-07 18:52:21,071][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-07 18:52:21,087][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-07 18:52:21,090][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-07 18:52:24,501][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:52:27,114][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-07 18:52:27,601][hydra.utils][INFO] - Starting training!
+[2024-02-07 18:52:34,504][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:52:44,508][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:52:54,511][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:53:04,513][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:53:14,514][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:53:24,516][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:53:34,517][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:53:44,518][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:53:54,519][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:54:04,519][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:54:14,520][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:54:24,521][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:54:34,523][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:54:44,523][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:54:54,524][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:55:04,525][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:55:14,528][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:55:24,530][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:55:34,531][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:55:44,532][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:55:54,534][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:56:04,535][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:56:14,536][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:56:24,537][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:56:34,541][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:56:44,544][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:56:54,545][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:57:04,547][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:57:14,549][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:57:24,551][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:57:34,556][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:57:44,557][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:57:54,558][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:58:04,559][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:58:14,561][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:58:24,561][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:58:34,563][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:58:44,564][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:58:54,566][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:59:04,568][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:59:14,569][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:59:24,571][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:59:34,573][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:59:44,575][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 18:59:54,577][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:00:04,579][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:00:14,580][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:00:24,581][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:00:34,582][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:00:44,583][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:00:54,584][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:01:04,585][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:01:14,586][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:01:24,587][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:01:34,588][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:01:44,589][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:01:54,589][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:02:04,590][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:02:28,025][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:02:50,041][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:03:07,450][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:03:17,451][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:03:27,453][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:03:37,454][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:03:47,456][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:03:57,457][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:04:07,459][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:04:17,460][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:04:27,461][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:04:37,462][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:04:47,464][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:04:57,465][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:05:07,466][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:05:17,467][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:05:27,467][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:05:37,468][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:05:47,469][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:05:57,470][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:06:07,471][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:06:17,472][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:06:27,474][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:06:37,475][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:06:47,476][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:06:57,479][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:07:07,481][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:07:17,485][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:07:27,487][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:07:37,488][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:07:47,489][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:07:57,491][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:08:07,492][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:08:17,493][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:08:27,495][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:08:37,496][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:08:47,498][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:08:57,499][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:09:07,500][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:09:17,503][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:09:27,506][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:09:37,508][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:09:47,510][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:09:57,511][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:10:07,513][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:10:17,515][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:10:27,518][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:10:37,519][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:10:47,521][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:10:57,523][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:11:07,525][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:11:17,527][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:11:27,531][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:11:37,532][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:11:47,533][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:11:57,536][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:12:07,538][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:12:17,542][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:12:27,543][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:12:37,545][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:12:47,546][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:12:57,547][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:13:07,548][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:13:17,548][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:13:27,550][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:13:37,552][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:13:47,553][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:13:57,555][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:14:07,556][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:22:31,857][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2024-02-07 19:22:41,863][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:22:51,868][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:23:01,875][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:23:11,876][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:23:21,881][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:23:31,886][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:23:41,891][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:23:51,895][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:24:01,900][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:24:11,906][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:24:21,910][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:24:31,915][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:24:41,920][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:24:51,924][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:25:01,930][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:25:11,935][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:25:21,940][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:25:31,944][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:25:41,949][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:25:51,954][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:26:01,959][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:26:11,964][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:26:21,968][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:26:31,972][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:26:38,381][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-07 19:26:38,420][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-07 19:26:38,572][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-07 19:26:38,572][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-07 19:26:38,585][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-07 19:26:38,589][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-07 19:26:41,977][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:26:51,984][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:27:01,990][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:27:11,995][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:27:22,000][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:27:32,005][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:27:38,776][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-07 19:27:39,305][hydra.utils][INFO] - Starting training!
+[2024-02-07 19:27:42,010][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:27:52,016][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:28:02,022][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:28:05,758][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2024-02-07 19:28:05,791][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+[2024-02-07 19:28:12,027][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:28:22,034][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:28:32,039][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:28:42,044][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:28:52,049][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:29:02,053][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:29:12,058][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:29:22,063][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:29:26,765][root][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2024-02-07 19:29:32,069][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:29:42,077][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:29:52,082][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:30:02,087][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:30:12,092][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:30:22,096][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:30:32,101][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:30:42,106][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:30:52,112][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:31:02,117][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:31:12,122][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:31:22,127][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:31:32,131][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:31:42,137][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:31:52,141][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:32:02,145][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:32:12,149][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:32:22,153][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:32:32,158][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:32:42,162][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:32:52,166][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:33:02,170][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:33:12,175][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:33:22,181][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:33:32,186][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:33:42,191][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:33:52,197][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:34:02,201][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:34:12,205][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:34:22,210][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:34:32,215][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:34:42,220][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:34:52,224][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:35:02,229][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:35:12,234][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:35:22,238][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:35:32,242][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:35:42,246][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:35:52,250][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:36:02,255][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:36:12,259][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:36:22,264][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:36:32,269][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:36:42,274][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:36:52,279][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:37:02,284][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:37:12,289][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:37:22,294][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:37:32,300][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:37:42,305][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:37:52,312][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:38:02,317][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:38:12,322][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:38:22,326][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:38:32,331][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:38:42,336][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:38:52,341][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:39:02,346][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:39:12,351][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:39:22,358][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:39:32,363][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:39:42,367][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:39:52,373][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:40:02,378][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:40:12,382][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:40:22,387][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:40:32,392][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:40:42,398][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:40:52,402][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:41:02,407][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:41:12,412][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:41:22,416][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:41:32,422][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:41:42,427][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:41:52,433][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:42:02,438][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:42:12,442][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:42:22,450][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:42:32,454][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:42:42,458][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:42:52,463][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:43:02,467][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:43:12,475][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:43:22,479][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:43:32,484][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:43:42,489][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:43:52,493][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:44:02,498][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:44:12,504][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:44:22,509][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-07 19:44:32,514][torch.distributed.distributed_c10d][INFO] - Waiting in store based barrier to initialize process group for rank: 0, key: store_based_barrier_key:1 (world_size=2, worker_count=1, timeout=0:30:00)
+[2024-02-11 13:17:57,330][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-11 13:17:57,355][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-11 13:17:58,075][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-11 13:17:58,075][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-11 13:17:58,101][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-11 13:17:58,105][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-11 13:18:04,343][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-11 13:18:04,781][hydra.utils][INFO] - Starting training!
+[2024-02-11 13:18:12,615][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2024-02-11 13:18:12,615][torch.distributed.distributed_c10d][INFO] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+[2024-02-11 13:19:24,481][root][INFO] - Reducer buckets have been rebuilt in this iteration.

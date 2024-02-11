@@ -8,10 +8,10 @@ from pathlib import Path
 from torch.utils.data import DataLoader
 from pytorch_lightning import seed_everything
 
-from graphwm.data.datamodule import worker_init_fn
-from graphwm.data.utils import dict_collate_fn
-from graphwm.common import PROJECT_ROOT
-from graphwm.model import GNS, PnR
+from data.datamodule import worker_init_fn
+from data.utils import dict_collate_fn
+from common import PROJECT_ROOT
+from model import GNS, PnR
 
 MODELS = {
     'gns': GNS,

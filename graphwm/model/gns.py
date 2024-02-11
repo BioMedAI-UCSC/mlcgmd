@@ -1,5 +1,8 @@
 import torch
 from torch.distributions.normal import Normal
+import matplotlib
+import matplotlib.pyplot as plt
+import math
 
 import graphwm.model.networks as nets
 from graphwm.model.base import GraphSim
@@ -16,6 +19,41 @@ class GNS(GraphSim):
           edge_dim=self.hparams.dimension+1+self.hparams.type_emb_size,
           out_dim=self.hparams.dimension*2, 
           **self.hparams.dynamics_gn_hparams)
+    self.plotNum = 0
+
+  def plotDistrib(self, acc_mean, acc_std, acc_distrib, acc_target, acc_loss):
+    # print("Distrib : ", acc_distrib) 
+    # print("target : ", acc_target)
+    cpuTarg = acc_target.cpu()
+    targetList = cpuTarg.numpy()
+
+    cpuMean = acc_mean.cpu()
+    meanList = cpuMean.detach().numpy()
+
+    cpuStd = acc_std.cpu()
+    stdList = cpuStd.detach().numpy()
+
+    cpuLoss = acc_loss.cpu()
+    loss = cpuLoss.detach().numpy()
+
+    distancesSqrd = [((meanList[i][0] - targetList[i][0])**2 + (meanList[i][1] - targetList[i][1])**2 + (meanList[i][1] - targetList[i][1])**2) for i in range(len(targetList))]
+    distStdsSqrd = [(((meanList[i][0] - targetList[i][0])/stdList[i][0])**2 + ((meanList[i][1] - targetList[i][1])/stdList[i][1])**2 + ((meanList[i][2] - targetList[i][2])/stdList[i][2])**2) for i in range(len(targetList))]
+
+    distances = [math.sqrt(x) for x in distancesSqrd]
+    distStds = [math.sqrt(x) for x in distStdsSqrd]
+
+    meanDistances = sum(distances)/len(distances)
+    meanStds = sum(distStds)/len(distStds)
+
+    # print("Average distance of targets to mean: " + str(meanDistances) + "\nAverage StDs away each target is to its predicted mean (issue?): " + str(meanStds) + "\nAccuracy Loss: " + str(loss))
+
+    matplotlib.use('Agg')
+    
+    plt.plot(loss, meanStds, 'ro')
+    title = "loss vs meanStds"
+    plt.title(title, fontsize=10)
+    name = "/projects/bbpa/coarseGrained/plots/plotStds"
+    plt.savefig(name)
   
   def predict(self, pos_seq, n_node, ptype_embeddings, bonds, weights, 
               lattices=None, deterministic=False):
@@ -70,6 +108,7 @@ class GNS(GraphSim):
     acc_dist = Normal(acc_mean, acc_std)
     acc_target = self._inverse_decoder_postprocessor(next_pos, pos_seq)
     acc_loss = -acc_dist.log_prob(acc_target).mean()
+    self.plotDistrib(acc_mean, acc_std, acc_dist, acc_target, acc_loss)
     
     # fit rgs residual and compute loss.
     if self.hparams.property_net_hparams:

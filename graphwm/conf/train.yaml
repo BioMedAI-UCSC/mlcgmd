@@ -1,4 +1,3 @@
-
 expname: ${data.name}_${model.name}
 workdir: ${oc.env:MODEL_DIR}/${expname}
 core:

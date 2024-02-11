@@ -7,3 +7,6 @@ ignored/
 .env
 .editorconfig
 .DS_Store
+mlcgmd_models/chain_gns/wandb/
+mlcgmd_models/hbv_pnr/wandb/
+graphwm/datasets/

@@ -301,3 +301,58 @@ class BatteryDataset(MDDataset):
       tensor_dict.update(self.get_cg_stats(tensor_dict))
       
     return tensor_dict
+  
+class HBVDataset(MDDataset):
+    """
+    Fields:
+        position: T x N x 3
+        #rgs: T x 1
+        bond_indices: (N-1) x 2
+        particle_types: N x 1
+    """
+        
+    def __getitem__(self, idx):
+        # load indices (ref: line 69)
+        idx_rollout, st_idx, ed_idx = self.get_file_indices(idx) 
+        select_idx = np.arange(st_idx, ed_idx, self.dilation, dtype=np.int64)
+        tensor_dict = {}
+        
+        ptype = utils.load_data(['particle_type'], self.traj_index[idx_rollout] / 'ptype.h5')[0]
+        #rgs = utils.load_data_w_idx(['rgs'], self.traj_index[idx_rollout] / 'rgs.h5', select_idx)[0]
+        bonds = utils.load_data(['bond_indices'], self.traj_index[idx_rollout] / 'bond.h5')[0]
+        
+        reversed_bonds = np.concatenate([bonds[:, 1:], bonds[:, :1]], axis=1)
+        bonds = np.concatenate([bonds, reversed_bonds], axis=0)
+        tensor_dict.update({'bonds': np.array(bonds, dtype=np.int64),
+                            'n_bond': np.array([bonds.shape[0]], dtype=np.int64)})
+        
+        if self.mode == 'oneshot':
+            tensor_dict.update({'particle_types': np.array(ptype, dtype=np.int64),
+                                #'rgs': np.array(rgs, dtype=np.float32)[None, :],
+                                'n_particle': np.array([ptype.shape[0]], dtype=np.int64)})
+            tensor_dict = {k: torch.from_numpy(v) for k, v in tensor_dict.items()}   
+            return tensor_dict
+        
+        positions = utils.load_data_w_idx(['position'], self.traj_index[idx_rollout] / 'position.h5', 
+                                        select_idx)[0]
+        if self.mode == 'train':
+            input_pos = positions[:-1]  
+            #input_rgs = rgs[:-1]
+        else:
+            input_pos = positions
+            #input_rgs = rgs
+        target_pos = positions[-1]
+        #target_rgs = rgs[-1]
+
+        tensor_dict.update({
+            'position': np.array(input_pos, dtype=np.float32).transpose(1, 0, 2),  # N x T x dim
+            'target': np.array(target_pos, dtype=np.float32),
+            'particle_types': np.array(ptype, dtype=np.int64),
+            'n_particle': np.array([target_pos.shape[0]], dtype=np.int64)
+        })
+        
+        # clustering use torch tensors.
+        tensor_dict = {k: torch.from_numpy(v) for k, v in tensor_dict.items()}
+        tensor_dict.update(self.get_cg_stats(tensor_dict))
+            
+        return tensor_dict

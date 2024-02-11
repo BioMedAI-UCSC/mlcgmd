@@ -1,0 +1,22 @@
+[2024-02-07 19:28:03,376][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-07 19:28:03,397][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-07 19:28:03,452][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-07 19:28:03,452][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-07 19:28:03,457][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-07 19:28:03,460][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-07 19:28:05,579][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-07 19:28:05,738][hydra.utils][INFO] - Starting training!
+[2024-02-07 19:28:05,758][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 1
+[2024-02-07 19:28:05,758][torch.distributed.distributed_c10d][INFO] - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+[2024-02-07 19:29:26,765][root][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2024-02-11 13:18:08,003][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-11 13:18:08,024][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-11 13:18:08,080][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-11 13:18:08,080][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-11 13:18:08,084][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-11 13:18:08,087][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-11 13:18:12,436][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-11 13:18:12,598][hydra.utils][INFO] - Starting training!
+[2024-02-11 13:18:12,615][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 1
+[2024-02-11 13:18:12,615][torch.distributed.distributed_c10d][INFO] - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+[2024-02-11 13:19:24,481][root][INFO] - Reducer buckets have been rebuilt in this iteration.
