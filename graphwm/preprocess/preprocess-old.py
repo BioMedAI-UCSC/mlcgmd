@@ -15,9 +15,6 @@ from chain import load_polymer_rg
 from hbv import load_hbv_traj
 from hbv import split_hbv_traj
 from hbv import train_test_split
-from protein import load_protein_traj
-from protein import split_protein_traj
-from protein import protein_train_test_split
 
 from graphwm.data.utils import store_data
 
@@ -84,48 +81,7 @@ def battery_to_h5(data_dir, data_save_dir):
   print(f"Done. Number of rollouts: {len(poly_file_dirs)} || Time Elapsed: {elapsed}")
 
 def protein_to_h5(data_dir, data_save_dir):
-  data_dir = Path(data_dir)
-  poly_file_dirs = [d for d in list(data_dir.iterdir()) if os.path.isdir(d)]
-  print(f"Found {len(poly_file_dirs)} protein trajectories.")
-  print(f"Use {mp.cpu_count()} cores.")
-  print("Start processing...")
-
-  def process_one_file(poly_file):
-    poly_index = poly_file.parts[-1]
-    os.makedirs(os.path.join(data_save_dir, poly_index), exist_ok=True)
-    if not Path(str(os.path.join(data_save_dir, poly_index, 'bond.h5'))).exists():
-      try:
-        data = load_protein_traj(poly_file)
-        print('successfully loaded')
-        store_data(['position'], [data[0]], os.path.join(data_save_dir, poly_index, 'position.h5'))
-        store_data(['particle_type'], [data[1]], os.path.join(data_save_dir, poly_index, 'ptype.h5'))
-        store_data(['bond_indices'], [data[2]], os.path.join(data_save_dir, poly_index, 'bond.h5'))
-      except Exception as e:
-        print(poly_index)
-        print(e)
-        pass
-    
-  now = time.time()
-  process_one_file(poly_file_dirs[0])
-  p_umap(process_one_file, poly_file_dirs)  
-  elapsed = time.time() - now
-  print(f"Done. Number of rollouts: {len(poly_file_dirs)} || Time Elapsed: {elapsed}")
-
-def split_protein(data_dir, data_save_dir):
-  data_dir = Path(data_dir)
-  poly_file_dirs = [d for d in list(data_dir.iterdir()) if os.path.isdir(d)]
-  print(f"Found {len(poly_file_dirs)} protein trajectories.")
-  print(f"Use {mp.cpu_count()} cores.")
-  print("Start processing...")
-
-  def process_one_file(poly_file):
-    split_protein_traj(poly_file, data_save_dir)
-
-  now = time.time()
-  for f in poly_file_dirs:
-    process_one_file(f)
-  elapsed = time.time() - now
-  print(f"Done. Number of rollouts: {len(poly_file_dirs)} || Time Elapsed: {elapsed}")
+  pass
 
 def hbv_to_h5(data_dir, data_save_dir):
   data_dir = Path(data_dir)
@@ -214,13 +170,7 @@ if __name__ == '__main__':
       battery_to_h5(data_dir, data_save_dir)
     elif command == 'hbv': # hepatitis B virus
       data_dir, data_save_dir = sys.argv[2:]
-      hbv_to_h5(data_dir, data_save_dir)
-    elif command == 'protein': # protein
-      data_dir, data_save_dir = sys.argv[2:]
-      protein_to_h5(data_dir, data_save_dir)
-    elif command == 'split_protein':
-      data_dir, data_save_dir = sys.argv[2:]
-      split_protein(data_dir, data_save_dir)
+      hbv_to_h5(data_dir, data_save_dir)  
     elif command == 'split_hbv':
       data_dir, data_save_dir = sys.argv[2:]
       split_hbv(data_dir, data_save_dir)

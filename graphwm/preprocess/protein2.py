@@ -73,7 +73,8 @@ def split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200):
         p = Path(os.path.join(save_path, dir_name + str(idx)))
         p.mkdir(exist_ok=True)
         split.save_dcd(os.path.join(p, 'trace.dcd'))
-        traj[0].save_pdb(os.path.join(p, 'bstate.pdb'))
+        shutil.copy(full_path,
+                    os.path.join(p, 'bstate.pdb'))
         print(f'finished split {idx}')
     
     print('3')
@@ -85,11 +86,9 @@ def split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200):
     save_one_split(0, splits[0])
     p_umap(save_one_split, i, splits)
 
-def protein_train_test_split(data_dir, data_save_dir, n_split=0.9):
-
-    full_path = data_dir + '/result/output_' + data_dir[len(data_dir) - 4:] + '.h5'
-
-    traj = mdtraj.load(full_path)
+def train_protein_test_split(data_dir, data_save_dir, n_split=0.9):
+    traj = mdtraj.load(os.path.join(data_dir, '???.h5'),
+                       top=os.path.join(data_dir, 'bstate.pdb'))
     
     n = traj.n_frames
 
@@ -103,10 +102,14 @@ def protein_train_test_split(data_dir, data_save_dir, n_split=0.9):
     p = Path(os.path.join(save_path, dir_name + '_train'))
     p.mkdir(exist_ok=True)
     train_traj.save_dcd(os.path.join(p, 'trace.dcd'))
-    traj[0].save_pdb(os.path.join(p, 'bstate.pdb'))
-
+    shutil.copy(os.path.join(data_dir, 'bstate.pdb'),
+                os.path.join(p, 'bstate.pdb'))
 
     p = Path(os.path.join(save_path, dir_name + '_test'))
     p.mkdir(exist_ok=True)
     test_traj.save_dcd(os.path.join(p, 'trace.dcd'))
-    traj[0].save_pdb(os.path.join(p, 'bstate.pdb'))
+    shutil.copy(os.path.join(data_dir, 'bstate.pdb'),
+                os.path.join(p, 'bstate.pdb'))
+
+
+split_protein_traj("./../datasets/proteins/1EBY", "./testing")
