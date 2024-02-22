@@ -13,10 +13,10 @@ def load_protein_traj(data_dir):
     atom_types: int, (num_atom,)
     bond_indices: int, (num_bonds, 2)
     """
-    full_path = data_dir + '/result/output_' + data_dir[len(data_dir) - 4:] + '.h5'
+    data_str = str(data_dir)
+    full_path = data_str + '/result/output_' + data_str[len(data_str) - 4:] + '.h5'
     traj = mdtraj.load(full_path)
     # scale units to A
-    print('read traj')
     atom_coords = traj.xyz * 10
     lattices = traj.unitcell_lengths * 10.
 
@@ -89,8 +89,12 @@ def protein_train_test_split(data_dir, data_save_dir, n_split=0.9):
 
     full_path = data_dir + '/result/output_' + data_dir[len(data_dir) - 4:] + '.h5'
 
-    traj = mdtraj.load(full_path)
-    
+    try:
+        traj = mdtraj.load(full_path)
+    except:
+        print(f"\tCannot process {data_dir[len(data_dir) - 4:]} because it is empty")
+        return
+
     n = traj.n_frames
 
     split_idx = int(n*(1-n_split))
@@ -100,13 +104,20 @@ def protein_train_test_split(data_dir, data_save_dir, n_split=0.9):
     dir_name = Path(data_dir).name
     save_path = Path(data_save_dir)
 
-    p = Path(os.path.join(save_path, dir_name + '_train'))
-    p.mkdir(exist_ok=True)
-    train_traj.save_dcd(os.path.join(p, 'trace.dcd'))
-    traj[0].save_pdb(os.path.join(p, 'bstate.pdb'))
-
-
-    p = Path(os.path.join(save_path, dir_name + '_test'))
-    p.mkdir(exist_ok=True)
-    test_traj.save_dcd(os.path.join(p, 'trace.dcd'))
-    traj[0].save_pdb(os.path.join(p, 'bstate.pdb'))
+    try:
+        p = Path(os.path.join(save_path, 'protein_train', dir_name))
+        p.mkdir(exist_ok=False)
+        train_traj.save_dcd(os.path.join(p, 'trace.dcd'))
+        traj[0].save_pdb(os.path.join(p, 'bstate.pdb'))
+        print(f"\tSuccessfully created training : {data_dir[len(data_dir) - 4:]}")
+    except:
+        print(f"\tTraining : {data_dir[len(data_dir) - 4:]} already exists")
+    
+    try:
+        p = Path(os.path.join(save_path, 'protein_test', dir_name))
+        p.mkdir(exist_ok=False)
+        test_traj.save_dcd(os.path.join(p, 'trace.dcd'))
+        traj[0].save_pdb(os.path.join(p, 'bstate.pdb'))
+        print(f"\tSuccessfully created testing : {data_dir[len(data_dir) - 4:]}")
+    except:
+        print(f"\tTesting : {data_dir[len(data_dir) - 4:]} already exists")

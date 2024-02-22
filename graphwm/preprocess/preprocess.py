@@ -19,7 +19,8 @@ from protein import load_protein_traj
 from protein import split_protein_traj
 from protein import protein_train_test_split
 
-from graphwm.data.utils import store_data
+# from ..data.utils import store_data
+from utils2 import store_data
 
 def polymer_to_h5(data_dir, data_save_dir):
   """
@@ -127,6 +128,24 @@ def split_protein(data_dir, data_save_dir):
   elapsed = time.time() - now
   print(f"Done. Number of rollouts: {len(poly_file_dirs)} || Time Elapsed: {elapsed}")
 
+def trainTestSplitProteins(data_dir, data_save_dir):
+  data_dir = Path(data_dir)
+  prot_file_dirs = [d for d in list(data_dir.iterdir())[:5] if os.path.isdir(d)]
+  print(f"Found {len(prot_file_dirs)} protein trajectories. First : {prot_file_dirs[0]}")
+  print(f"Use {mp.cpu_count()} cores.")
+  print("Start processing...")
+
+  def processOneFile(protein):
+    protein_train_test_split(str(protein), str(data_save_dir))
+
+  now = time.time()
+  for f in prot_file_dirs:
+    print(f"processing {str(f)[len(str(f)) - 4:]}")
+    processOneFile(f)
+  elapsed = time.time() - now
+  print(f"Done. Number of rollouts: {len(prot_file_dirs)} || Time Elapsed: {elapsed}")
+
+
 def hbv_to_h5(data_dir, data_save_dir):
   data_dir = Path(data_dir)
   poly_file_dirs = [d for d in list(data_dir.iterdir()) if os.path.isdir(d)]
@@ -218,6 +237,9 @@ if __name__ == '__main__':
     elif command == 'protein': # protein
       data_dir, data_save_dir = sys.argv[2:]
       protein_to_h5(data_dir, data_save_dir)
+    elif command == 'ttprot': #train test split proteins
+      data_dir, data_save_dir = sys.argv[2:]
+      trainTestSplitProteins(data_dir, data_save_dir)
     elif command == 'split_protein':
       data_dir, data_save_dir = sys.argv[2:]
       split_protein(data_dir, data_save_dir)
