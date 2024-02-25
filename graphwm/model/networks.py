@@ -115,6 +115,8 @@ class GraphIndependent(nn.Module):
   def forward(self, graph):
     
     if self._edge_net_kwargs:
+    #   print(f"model edge net kwargs : {self._edge_net_kwargs}")
+    #   print(f"graph edges : {graph.edges.shape}")
       updated_edges = self._edge_mlp(graph.edges)
     else:
       updated_edges = graph.edges

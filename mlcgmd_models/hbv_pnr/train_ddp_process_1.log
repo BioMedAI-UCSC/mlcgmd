@@ -20,3 +20,14 @@
 [2024-02-11 13:18:12,615][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 1
 [2024-02-11 13:18:12,615][torch.distributed.distributed_c10d][INFO] - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
 [2024-02-11 13:19:24,481][root][INFO] - Reducer buckets have been rebuilt in this iteration.
+[2024-02-21 19:09:41,651][hydra.utils][INFO] - Instantiating <graphwm.data.datamodule.PLDataModule>
+[2024-02-21 19:09:41,672][hydra.utils][INFO] - Instantiating model : <graphwm.model.PnR>
+[2024-02-21 19:09:41,726][hydra.utils][INFO] - Adding callback <LearningRateMonitor>
+[2024-02-21 19:09:41,727][hydra.utils][INFO] - Adding callback <ModelCheckpoint>
+[2024-02-21 19:09:41,730][hydra.utils][INFO] - Instantiating <WandbLogger>
+[2024-02-21 19:09:41,734][hydra.utils][INFO] - W&B is now watching <all>!
+[2024-02-21 19:09:47,185][hydra.utils][INFO] - Instantiating the Trainer
+[2024-02-21 19:09:47,285][hydra.utils][INFO] - Starting training!
+[2024-02-21 19:09:47,335][torch.distributed.distributed_c10d][INFO] - Added key: store_based_barrier_key:1 to store for rank: 1
+[2024-02-21 19:09:47,335][torch.distributed.distributed_c10d][INFO] - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+[2024-02-21 19:11:10,697][root][INFO] - Reducer buckets have been rebuilt in this iteration.

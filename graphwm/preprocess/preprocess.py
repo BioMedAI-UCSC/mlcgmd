@@ -130,7 +130,7 @@ def split_protein(data_dir, data_save_dir):
 
 def trainTestSplitProteins(data_dir, data_save_dir):
   data_dir = Path(data_dir)
-  prot_file_dirs = [d for d in list(data_dir.iterdir())[:5] if os.path.isdir(d)]
+  prot_file_dirs = [d for d in list(data_dir.iterdir()) if os.path.isdir(d)]
   print(f"Found {len(prot_file_dirs)} protein trajectories. First : {prot_file_dirs[0]}")
   print(f"Use {mp.cpu_count()} cores.")
   print("Start processing...")

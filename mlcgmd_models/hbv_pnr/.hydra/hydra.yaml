@@ -1,6 +1,6 @@
 hydra:
   run:
-    dir: /projects/bbpa/coarseGrained/mlcgmd/mlcgmd_models/hbv_pnr
+    dir: ${workdir}
   sweep:
     dir: ${workdir}
     subdir: ${hydra.job.num}_${hydra.job.id}
@@ -107,12 +107,10 @@ hydra:
   callbacks: {}
   output_subdir: .hydra
   overrides:
-    hydra:
-    - hydra.run.dir="/projects/bbpa/coarseGrained/mlcgmd/mlcgmd_models/hbv_pnr"
-    - hydra.job.name=train_ddp_process_1
+    hydra: []
     task: []
   job:
-    name: train_ddp_process_1
+    name: train
     override_dirname: ''
     id: ???
     num: ???
