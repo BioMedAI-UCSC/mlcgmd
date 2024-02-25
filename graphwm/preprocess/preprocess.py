@@ -20,7 +20,7 @@ from protein import split_protein_traj
 from protein import protein_train_test_split
 
 # from ..data.utils import store_data
-from utils2 import store_data
+from utils import store_data
 
 def polymer_to_h5(data_dir, data_save_dir):
   """
@@ -84,6 +84,7 @@ def battery_to_h5(data_dir, data_save_dir):
   elapsed = time.time() - now
   print(f"Done. Number of rollouts: {len(poly_file_dirs)} || Time Elapsed: {elapsed}")
 
+
 def protein_to_h5(data_dir, data_save_dir):
   data_dir = Path(data_dir)
   poly_file_dirs = [d for d in list(data_dir.iterdir()) if os.path.isdir(d)]
@@ -128,7 +129,7 @@ def split_protein(data_dir, data_save_dir):
   elapsed = time.time() - now
   print(f"Done. Number of rollouts: {len(poly_file_dirs)} || Time Elapsed: {elapsed}")
 
-def trainTestSplitProteins(data_dir, data_save_dir):
+def protein_train_test_split(data_dir, data_save_dir):
   data_dir = Path(data_dir)
   prot_file_dirs = [d for d in list(data_dir.iterdir()) if os.path.isdir(d)]
   print(f"Found {len(prot_file_dirs)} protein trajectories. First : {prot_file_dirs[0]}")
@@ -204,7 +205,7 @@ def make_test(data_dir, data_save_dir, dilation = 5, seq_len = 20):
 
   traj2.save_dcd(output_path / Path('trace.dcd'))
 
-def test_split(data_dir, data_save_dir, n_split=0.9):
+def hbv_test_split(data_dir, data_save_dir, n_split=0.9):
   data_dir = Path(data_dir)
   poly_file_dirs = [d for d in list(data_dir.iterdir()) if os.path.isdir(d)]
   print(f"Found {len(poly_file_dirs)} hbv trajectories.")
@@ -239,7 +240,7 @@ if __name__ == '__main__':
       protein_to_h5(data_dir, data_save_dir)
     elif command == 'ttprot': #train test split proteins
       data_dir, data_save_dir = sys.argv[2:]
-      trainTestSplitProteins(data_dir, data_save_dir)
+      protein_train_test_split(data_dir, data_save_dir)
     elif command == 'split_protein':
       data_dir, data_save_dir = sys.argv[2:]
       split_protein(data_dir, data_save_dir)
@@ -255,9 +256,9 @@ if __name__ == '__main__':
       if(len(sys.argv) == 6):
         seq_len = int(sys.argv[5])
       make_test(data_dir,data_save_dir,dilation,seq_len)
-    elif command == 'test_split':
+    elif command == 'hbv_test_split':
       data_dir, data_save_dir = sys.argv[2:4]
       n_split = 0.9
       if(len(sys.argv) == 5):
         n_split= int(sys.argv[4])
-      test_split(data_dir, data_save_dir, n_split)
+      hbv_test_split(data_dir, data_save_dir, n_split)

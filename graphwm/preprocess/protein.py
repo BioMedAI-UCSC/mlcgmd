@@ -1,6 +1,7 @@
 import numpy as np
 import os
 import shutil
+impor
 from pathlib import Path
 from p_tqdm import p_umap
 
@@ -34,6 +35,7 @@ def load_protein_traj(data_dir):
     #import pdb; pdb.set_trace()
     print(atom_coords, atom_types, bond_indices)
     return [atom_coords, atom_types, bond_indices]
+
 
 def split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200):
 
@@ -84,7 +86,7 @@ def split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200):
     
     save_one_split(0, splits[0])
     p_umap(save_one_split, i, splits)
-
+    
 def protein_train_test_split(data_dir, data_save_dir, n_split=0.9):
 
     full_path = data_dir + '/result/output_' + data_dir[len(data_dir) - 4:] + '.h5'
@@ -96,6 +98,7 @@ def protein_train_test_split(data_dir, data_save_dir, n_split=0.9):
         return
 
     n = traj.n_frames
+    max_s = n - traj_len
 
     split_idx = int(n*(1-n_split))
     train_traj = traj[:split_idx]
@@ -104,20 +107,66 @@ def protein_train_test_split(data_dir, data_save_dir, n_split=0.9):
     dir_name = Path(data_dir).name
     save_path = Path(data_save_dir)
 
-    try:
-        p = Path(os.path.join(save_path, 'protein_train', dir_name))
-        p.mkdir(exist_ok=False)
-        train_traj.save_dcd(os.path.join(p, 'trace.dcd'))
-        traj[0].save_pdb(os.path.join(p, 'bstate.pdb'))
-        print(f"\tSuccessfully created training : {data_dir[len(data_dir) - 4:]}")
-    except:
-        print(f"\tTraining : {data_dir[len(data_dir) - 4:]} already exists")
+    # LOGIC HERE FOR SPLITTING PROTEIN
+    i = 0
+    nsplit = int(n / traj_len + 1) * 2
+    print(n, nsplit)
+    # idx = np.arange(0, max_s, traj_len)
+    # idx = np.append(idx, [max_s])
     
-    try:
-        p = Path(os.path.join(save_path, 'protein_test', dir_name))
-        p.mkdir(exist_ok=False)
-        test_traj.save_dcd(os.path.join(p, 'trace.dcd'))
-        traj[0].save_pdb(os.path.join(p, 'bstate.pdb'))
-        print(f"\tSuccessfully created testing : {data_dir[len(data_dir) - 4:]}")
-    except:
-        print(f"\tTesting : {data_dir[len(data_dir) - 4:]} already exists")
+    
+    # needed_split = nsplit - len(idx) 
+    
+    # lw = np.arange(0, max_s, int(max_s / needed_split))
+    # hg = lw[1:]
+    # hg[-1] = max_s
+    # lw = lw[:-1]
+    # idx = np.append(idx, np.random.randint(lw, hg))
+    # print(idx, n, max_s, lw, hg)
+    
+    # splits = []
+    # print('1')
+    # for i in idx:
+    #     splits.append(traj[i:i+traj_len])
+    # print('2')
+    
+    # dir_name = Path(data_dir).name
+    # save_path = Path(data_save_dir)
+    
+    
+    # def save_one_split(idx, split):
+    #     print(f'start split {idx}')
+    #     p = Path(os.path.join(save_path, dir_name + str(idx)))
+    #     p.mkdir(exist_ok=True)
+    #     split.save_dcd(os.path.join(p, 'trace.dcd'))
+    #     shutil.copy(os.path.join(data_dir, 'bstate.pdb'),
+    #                 os.path.join(p, 'bstate.pdb'))
+    #     print(f'finished split {idx}')
+    
+    # print('3')
+    # #splits = np.array(splits)
+    # i = np.arange(len(splits))
+    # print('4')
+    
+    
+    # save_one_split(0, splits[0])
+    # p_umap(save_one_split, i, splits)
+
+
+    # try:
+    #     p = Path(os.path.join(save_path, 'protein_train', dir_name))
+    #     p.mkdir(exist_ok=False)
+    #     train_traj.save_dcd(os.path.join(p, 'trace.dcd'))
+    #     traj[0].save_pdb(os.path.join(p + f"{i}", 'bstate.pdb'))
+    #     print(f"\tSuccessfully created training : {data_dir[len(data_dir) - 4:]}{i}")
+    # except:
+    #     print(f"\tTraining : {data_dir[len(data_dir) - 4:]} already exists")
+    
+    # try:
+    #     p = Path(os.path.join(save_path, 'protein_test', dir_name))
+    #     p.mkdir(exist_ok=False)
+    #     test_traj.save_dcd(os.path.join(p, 'trace.dcd'))
+    #     traj[0].save_pdb(os.path.join(p, 'bstate.pdb'))
+    #     print(f"\tSuccessfully created testing : {data_dir[len(data_dir) - 4:]}")
+    # except:
+    #     print(f"\tTesting : {data_dir[len(data_dir) - 4:]} already exists")

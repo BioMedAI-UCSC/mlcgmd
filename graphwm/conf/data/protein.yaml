@@ -2,7 +2,7 @@ name: protein
 dir: ${oc.env:PROTEIN_DATASET_DIR}
 dimension: 3
 batch_size: 3
-traj_len: 1000
+traj_len: 999
 recursive_metis: True
 
 

@@ -223,6 +223,7 @@ def compute_com(positions, weights, cluster):
     cluster: N x 1
   """
   weights = weights.view(-1, 1, 1)  
+  print(cluster)
   cg_weights = scatter(weights.squeeze(), cluster, dim=0, reduce='sum').view(-1, 1, 1)
   cg_positions = scatter(weights*positions, cluster, dim=0, reduce='sum') / cg_weights
   cg_weights = cg_weights.view(-1, 1)
