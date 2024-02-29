@@ -125,11 +125,11 @@ def split_protein(data_dir, data_save_dir):
 
   now = time.time()
   for f in poly_file_dirs:
-    process_one_file(f)
+    process_one_file(str(f))
   elapsed = time.time() - now
   print(f"Done. Number of rollouts: {len(poly_file_dirs)} || Time Elapsed: {elapsed}")
 
-def protein_train_test_split(data_dir, data_save_dir):
+def protein_test_split(data_dir, data_save_dir):
   data_dir = Path(data_dir)
   prot_file_dirs = [d for d in list(data_dir.iterdir()) if os.path.isdir(d)]
   print(f"Found {len(prot_file_dirs)} protein trajectories. First : {prot_file_dirs[0]}")
@@ -240,7 +240,7 @@ if __name__ == '__main__':
       protein_to_h5(data_dir, data_save_dir)
     elif command == 'ttprot': #train test split proteins
       data_dir, data_save_dir = sys.argv[2:]
-      protein_train_test_split(data_dir, data_save_dir)
+      protein_test_split(data_dir, data_save_dir)
     elif command == 'split_protein':
       data_dir, data_save_dir = sys.argv[2:]
       split_protein(data_dir, data_save_dir)

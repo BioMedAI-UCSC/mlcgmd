@@ -1,0 +1,7 @@
+TASK_ID, 0
+GpuFreq=control_disabled
+/u/kbachelor/miniconda3/envs/kbcoarse/bin/python: can't open file 'preprocess.py': [Errno 2] No such file or directory
+/u/kbachelor/miniconda3/envs/kbcoarse/bin/python: can't open file 'preprocess.py': [Errno 2] No such file or directory
+/u/kbachelor/miniconda3/envs/kbcoarse/bin/python: can't open file 'preprocess.py': [Errno 2] No such file or directory
+/u/kbachelor/miniconda3/envs/kbcoarse/bin/python: can't open file 'preprocess.py': [Errno 2] No such file or directory
+srun: error: gpub041: tasks 0-3: Exited with exit code 2

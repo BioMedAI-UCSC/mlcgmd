@@ -9,11 +9,14 @@ srun:
 
 #submit a batch job
 sbatch-kb:
-	sbatch launchkb.slurm
+	sbatch ../launchkb.slurm
 sbatch-ds:
-	sbatch launchds.slurm
+	sbatch ../launchds.slurm
 preprocess:
 	python graphwm/preprocess/preprocess.py hbv graphwm/datasets/protein_train/ graphwm/datasets/protein_train_ready
+
+sbatch-preprocess:
+	sbatch graphwm/preprocess.slurm
 
 # MAKE SURE TO DELETE ANY PARTIALLY CREATED FILES
 prepreprocess:

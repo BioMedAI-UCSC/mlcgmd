@@ -4,6 +4,7 @@ import json
 import numpy as np
 import torch
 import h5py
+import sys
 
 from torch_geometric.nn import MessagePassing
 
@@ -50,7 +51,7 @@ def load_data(data_names, path):
 def load_data_w_idx(data_names, path, select_idx):
   hf = h5py.File(path, 'r')
   data = []
-#   print(f"length of data names : {len(data_names)}")
+  # print(f"length of data names : {len(data_names)}")
   for i in range(len(data_names)):
     # print(f"index : {i}, data names : {hf.get(data_names[i])}, select idx : {select_idx}")
     # print(f"getting : {hf.get(data_names[i])[select_idx]}")

@@ -37,7 +37,7 @@ def load_hbv_traj(data_dir):
 def split_hbv_traj(data_dir, data_save_dir, nsplit=None, traj_len=200):
     traj = mdtraj.load_dcd(os.path.join(data_dir, 'trace.dcd'),
                        top=os.path.join(data_dir, 'bstate.pdb'))
-    
+
     n = traj.n_frames
     max_s = n - traj_len
     if(nsplit == None):

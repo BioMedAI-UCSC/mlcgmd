@@ -1,28 +1,26 @@
 import numpy as np
 import os
 import shutil
-impor
 from pathlib import Path
 from p_tqdm import p_umap
 
 import mdtraj
+from utils import store_data
 
 
-def load_protein_traj(data_dir):
+def load_protein_traj(trajectoryOrig, topology):
     """
     atom_coords: float, (num_traj, num_atom, 3)
     atom_types: int, (num_atom,)
     bond_indices: int, (num_bonds, 2)
     """
-    data_str = str(data_dir)
-    full_path = data_str + '/result/output_' + data_str[len(data_str) - 4:] + '.h5'
-    traj = mdtraj.load(full_path)
+    traj = trajectoryOrig
+    # traj.top = topology
     # scale units to A
     atom_coords = traj.xyz * 10
-    lattices = traj.unitcell_lengths * 10.
 
     # get topology of the graph
-    table, bonds = traj.top.to_dataframe()
+    _, bonds = traj.top.to_dataframe()
 
     atom_types = [atom.element.atomic_number for atom in traj.top.atoms]
     atom_types = np.array(atom_types)
@@ -33,7 +31,6 @@ def load_protein_traj(data_dir):
 
     #assert atom_coords.shape[0] == lattices.shape[0] == rgs.shape[0]
     #import pdb; pdb.set_trace()
-    print(atom_coords, atom_types, bond_indices)
     return [atom_coords, atom_types, bond_indices]
 
 
@@ -46,10 +43,9 @@ def split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200):
     max_s = n - traj_len
     if(nsplit == None):
         nsplit = int(n / traj_len + 1) * 2
-    print(n, nsplit)
+    # print(n, nsplit)
     idx = np.arange(0, max_s, traj_len)
     idx = np.append(idx, [max_s])
-    
     
     needed_split = nsplit - len(idx) 
     
@@ -61,10 +57,8 @@ def split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200):
     print(idx, n, max_s, lw, hg)
     
     splits = []
-    print('1')
     for i in idx:
         splits.append(traj[i:i+traj_len])
-    print('2')
     
     dir_name = Path(data_dir).name
     save_path = Path(data_save_dir)
@@ -74,8 +68,17 @@ def split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200):
         print(f'start split {idx}')
         p = Path(os.path.join(save_path, dir_name + str(idx)))
         p.mkdir(exist_ok=True)
-        split.save_dcd(os.path.join(p, 'trace.dcd'))
-        traj[0].save_pdb(os.path.join(p, 'bstate.pdb'))
+        print(p)
+        if not Path(str(os.path.join(p, 'bond.h5'))).exists():
+            try:
+                data = load_protein_traj(split, traj[0])
+                print('successfully loaded')
+                store_data(['position'], [data[0]], os.path.join(p, 'position.h5'))
+                store_data(['particle_type'], [data[1]], os.path.join(p, 'ptype.h5'))
+                store_data(['bond_indices'], [data[2]], os.path.join(p,'bond.h5'))
+            except Exception as e:
+                print(e)
+                pass
         print(f'finished split {idx}')
     
     print('3')
@@ -83,8 +86,11 @@ def split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200):
     i = np.arange(len(splits))
     print('4')
     
+    print(len(splits))
     
+    print("5")
     save_one_split(0, splits[0])
+    print("6")
     p_umap(save_one_split, i, splits)
     
 def protein_train_test_split(data_dir, data_save_dir, n_split=0.9):
