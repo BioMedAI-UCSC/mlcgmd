@@ -147,7 +147,7 @@ def run(cfg: DictConfig) -> None:
         progress_bar_refresh_rate=cfg.logging.progress_bar_refresh_rate,
         resume_from_checkpoint=ckpt,
         **cfg.train.pl_trainer,
-        # max_epochs=22
+        max_epochs=13
     )
     
     log_hyperparameters(trainer=trainer, model=model, cfg=cfg)
@@ -158,8 +158,8 @@ def run(cfg: DictConfig) -> None:
     hydra.utils.log.info("Starting training!")
     trainer.fit(model=model, datamodule=datamodule)
 
-    # hydra.utils.log.info("Starting testing!")
-    # trainer.test(datamodule=datamodule)
+    hydra.utils.log.info("Starting testing!")
+    trainer.test(datamodule=datamodule)
 
     # Logger closing to release resources/avoid multi-run conflicts
     if wandb_logger is not None:

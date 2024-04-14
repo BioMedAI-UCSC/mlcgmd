@@ -1,0 +1,25 @@
+random_seed: 10
+rollout_length: 2500 #1000000
+batch_size: 40
+num_batches: 1
+deter: False
+save_pos: True
+save_frequency: 1 #100
+dataname: protein
+model_dir: ${oc.env:MODEL_DIR}/protein_pnr
+save_dir: ${model_dir}
+
+ld_kwargs:
+  step_per_sigma: 5
+  step_size: 0.0001
+
+data:
+  _target_: graphwm.data.data.HBVDataset
+  directory: ${oc.env:PROTEIN_DATASET_DIR}
+  split: ${oc.env:PROJECT_ROOT}/splits/protein/eval.txt ######
+  mode: rollout
+  recursive_metis: False
+
+hydra:
+  run:
+    dir: ${save_dir}

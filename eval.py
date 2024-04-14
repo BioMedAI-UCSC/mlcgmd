@@ -8,10 +8,10 @@ from pathlib import Path
 from torch.utils.data import DataLoader
 from pytorch_lightning import seed_everything
 
-from data.datamodule import worker_init_fn
-from data.utils import dict_collate_fn
-from common import PROJECT_ROOT
-from model import GNS, PnR
+from graphwm.data.datamodule import worker_init_fn
+from graphwm.data.utils import dict_collate_fn
+from graphwm.common import PROJECT_ROOT
+from graphwm.model import GNS, PnR
 
 MODELS = {
     'gns': GNS,
@@ -19,12 +19,15 @@ MODELS = {
 }
 
 def run_eval(cfg):
+  # KEEP THE SAME
   seed_everything(cfg.random_seed)
     
+  # KEEP SAME
   model_dir = Path(cfg.model_dir)
   dataclass, modelclass = model_dir.parts[-1].split('_')[:2]
   save_dir = Path(cfg.save_dir)
   
+  # MAY NEED CHANGING
   if modelclass == 'pnr':
     folder_name = f'nsteps{cfg.ld_kwargs.step_per_sigma}_stepsize_{cfg.ld_kwargs.step_size}'
   else:
@@ -33,6 +36,7 @@ def run_eval(cfg):
     print('Rollout already exists.')
     return
   
+  # KEEP SAME
   last_model_dir = Path(cfg.model_dir) / 'last.ckpt'
   if last_model_dir.exists():
     ckpt_path = str(last_model_dir)
@@ -45,6 +49,7 @@ def run_eval(cfg):
 
   model = MODELS[modelclass].load_from_checkpoint(ckpt_path)
   # prepare data
+  # MAY NEED TO LOOK AT
   dataset = hydra.utils.instantiate(cfg.data, 
                                     seq_len=model.hparams.seq_len, 
                                     dilation=model.hparams.dilation, 
@@ -52,12 +57,14 @@ def run_eval(cfg):
   data_loader = DataLoader(dataset, shuffle=False, batch_size=cfg.batch_size, num_workers=8, 
                           worker_init_fn=worker_init_fn, collate_fn=dict_collate_fn)
   
+  # KEEP SAME
   model = model.to('cuda')
   model.eval()
   os.makedirs(save_dir, exist_ok=True)
   outputs = []
   
   # adjust ld_kwargs
+  # THIS MAY NEED LOOKING AT
   if modelclass == 'pnr':
     model.hparams.step_per_sigma = cfg.ld_kwargs.step_per_sigma
     model.hparams.step_size = cfg.ld_kwargs.step_size
@@ -82,7 +89,7 @@ def run_eval(cfg):
         last_cluster = output['cluster'].max()+1 
         if 'component' in output:
           output['component'] += last_component  # fix the offsets for <component>
-          last_component = output['component'].max()+1    
+          last_component = output['component'].max()+1
       outputs.append(output)
   elapsed = time.time() - now
   

@@ -1,9 +1,9 @@
 hydra:
   run:
-    dir: ${workdir}
+    dir: ${save_dir}
   sweep:
-    dir: ${workdir}
-    subdir: ${hydra.job.num}_${hydra.job.id}
+    dir: multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}
   launcher:
     _target_: hydra._internal.core_plugins.basic_launcher.BasicLauncher
   sweeper:
@@ -110,14 +110,12 @@ hydra:
     hydra: []
     task: []
   job:
-    name: train
+    name: eval
     override_dirname: ''
     id: ???
     num: ???
-    config_name: train
-    env_set:
-      WANDB_START_METHOD: thread
-      WANDB_DIR: ./
+    config_name: eval
+    env_set: {}
     env_copy: []
     config:
       override_dirname:
@@ -138,11 +136,6 @@ hydra:
       schema: structured
       provider: schema
     choices:
-      train: chain
-      optim: chain
-      logging: default
-      model: chain
-      data: chain
       hydra/env: default
       hydra/callbacks: null
       hydra/job_logging: default

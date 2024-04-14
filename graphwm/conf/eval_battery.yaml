@@ -4,7 +4,7 @@ batch_size: 10
 num_batches: 5
 deter: False
 save_pos: True
-save_frequency: 100
+save_frequency: 100 
 dataname: battery
 model_dir: ${oc.env:MODEL_DIR}/battery_pnr
 save_dir: ${model_dir}
