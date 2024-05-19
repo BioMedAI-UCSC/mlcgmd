@@ -1,4 +1,4 @@
-random_seed: 10
+random_seed: 35
 rollout_length: 2500 #1000000
 batch_size: 40
 num_batches: 1
@@ -18,7 +18,7 @@ data:
   directory: ${oc.env:PROTEIN_DATASET_DIR}
   split: ${oc.env:PROJECT_ROOT}/splits/protein/eval.txt ######
   mode: rollout
-  recursive_metis: False
+  recursive_metis: False 
 
 hydra:
   run:

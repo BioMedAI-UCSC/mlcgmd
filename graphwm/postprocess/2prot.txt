@@ -1,0 +1,2 @@
+Shape of original file xyz 2JLE:  <mdtraj.Topology with 4 chains, 1418 residues, 16532 atoms, 16311 bonds>
+Shape of transposed evaluated positions 2JLE100:  (30, 33064, 3)

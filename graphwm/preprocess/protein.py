@@ -41,9 +41,10 @@ def split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200):
     
     n = traj.n_frames
     max_s = n - traj_len
+    # print(n)
     if(nsplit == None):
         nsplit = int(n / traj_len + 1) * 2
-    # print(n, nsplit)
+    print(n, nsplit)
     idx = np.arange(0, max_s, traj_len)
     idx = np.append(idx, [max_s])
     

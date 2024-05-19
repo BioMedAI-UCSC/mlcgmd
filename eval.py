@@ -54,7 +54,7 @@ def run_eval(cfg):
                                     seq_len=model.hparams.seq_len, 
                                     dilation=model.hparams.dilation, 
                                     grouping=model.hparams.cg_level)
-  data_loader = DataLoader(dataset, shuffle=False, batch_size=cfg.batch_size, num_workers=8, 
+  data_loader = DataLoader(dataset, shuffle=False, batch_size=cfg.batch_size, num_workers=4, 
                           worker_init_fn=worker_init_fn, collate_fn=dict_collate_fn)
   
   # KEEP SAME
