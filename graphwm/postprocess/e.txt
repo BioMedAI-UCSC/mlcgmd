@@ -1,0 +1,3 @@
+Shape of original file xyz:  (10000, 16532, 3)
+Shape of original file topology:  <mdtraj.Topology with 4 chains, 1418 residues, 16532 atoms, 16311 bonds>
+Shape of evaluated rollout positions 2JLE100  torch.Size([1102, 2470, 3])

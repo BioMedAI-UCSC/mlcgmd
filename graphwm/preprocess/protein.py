@@ -82,16 +82,16 @@ def split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200):
                 pass
         print(f'finished split {idx}')
     
-    print('3')
+    # print('3')
     #splits = np.array(splits)
     i = np.arange(len(splits))
-    print('4')
+    # print('4')
     
     print(len(splits))
     
-    print("5")
+    # print("5")
     save_one_split(0, splits[0])
-    print("6")
+    # print("6")
     p_umap(save_one_split, i, splits)
     
 def protein_train_test_split(data_dir, data_save_dir, n_split=0.9):
