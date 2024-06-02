@@ -177,3 +177,71 @@ def protein_train_test_split(data_dir, data_save_dir, n_split=0.9):
     #     print(f"\tSuccessfully created testing : {data_dir[len(data_dir) - 4:]}")
     # except:
     #     print(f"\tTesting : {data_dir[len(data_dir) - 4:]} already exists")
+
+
+def filter_split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200):
+
+    full_path = data_dir + '/result/output_' + data_dir[len(data_dir) - 4:] + '.h5'
+    traj = mdtraj.load(full_path)
+    
+    n = traj.n_frames                                   # number of frames in the trajectory
+    max_s = n - traj_len                                # last index for split 
+    # print(n)
+    if(nsplit == None):
+        nsplit = int(n / traj_len + 1) * 2
+    print(n, nsplit)
+    idx = np.arange(0, max_s, traj_len)                 # generates iterator
+    idx = np.append(idx, [max_s])                       # appends the last index to the iterator
+    
+    needed_split = nsplit - len(idx)                    # number of remaining splits needed
+    
+    lw = np.arange(0, max_s, int(max_s / needed_split)) 
+    hg = lw[1:]                                              
+    hg[-1] = max_s                                      
+    lw = lw[:-1]                                        
+    idx = np.append(idx, np.random.randint(lw, hg))      
+    print(idx, n, max_s, lw, hg)
+    
+    splits = []                                         # list to store the split trajectories
+    for i in idx:
+        splits.append(traj[i:i+traj_len])
+    
+    dir_name = Path(data_dir).name
+    save_path = Path(data_save_dir)
+    
+    def filter_ions(idx, data):
+        # split = split.atom_slice(split.top.select('not water'))
+        data = data.atom_slice(data.top.select('not name NA or not name CL'))
+        # data = data.atom_slice(data.top.select('not type Cl-'))
+        print(f'Finished filtering ions for {idx}')
+        return data
+    
+    def save_one_split(idx, split):
+        print(f'start split {idx}')
+        p = Path(os.path.join(save_path, dir_name + str(idx)))
+        p.mkdir(exist_ok=True)
+        print(p)
+        if not Path(str(os.path.join(p, 'bond.h5'))).exists():
+            try:
+                data = load_protein_traj(split, traj[0])
+                print('successfully loaded')
+                data = filter_ions(idx, data)
+                store_data(['position'], [data[0]], os.path.join(p, 'position.h5'))
+                store_data(['particle_type'], [data[1]], os.path.join(p, 'ptype.h5'))
+                store_data(['bond_indices'], [data[2]], os.path.join(p,'bond.h5'))
+            except Exception as e:
+                print(e)
+                pass
+        print(f'finished split {idx}')
+    
+    # print('3')
+    #splits = np.array(splits)
+    i = np.arange(len(splits))
+    # print('4')
+    
+    print(len(splits))
+    
+    # print("5")
+    save_one_split(0, splits[0])
+    # print("6")
+    p_umap(save_one_split, i, splits)
