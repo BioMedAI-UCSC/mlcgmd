@@ -16,7 +16,7 @@ from hbv import load_hbv_traj
 from hbv import split_hbv_traj
 from hbv import train_test_split
 from protein import load_protein_traj
-from protein import split_protein_traj
+from protein import split_protein_traj, filter_split_protein_traj
 from protein import protein_train_test_split
 
 # from ..data.utils import store_data
@@ -93,10 +93,16 @@ def protein_to_h5(data_dir, data_save_dir):
   print("Start processing...")
 
   def process_one_file(poly_file):
+    # print(poly_file)
+    # prot_top = md.load_
+    
     poly_index = poly_file.parts[-1]
+    poly_file = str(poly_file)
     os.makedirs(os.path.join(data_save_dir, poly_index), exist_ok=True)
     if not Path(str(os.path.join(data_save_dir, poly_index, 'bond.h5'))).exists():
       try:
+        # poly_file = poly_file + '/result/output_' + poly_file[len(poly_file) - 4:] + '.h5'
+        # prot_top = md.load_frame(poly_file, 0).topology
         data = load_protein_traj(poly_file)
         print('successfully loaded')
         store_data(['position'], [data[0]], os.path.join(data_save_dir, poly_index, 'position.h5'))
@@ -122,6 +128,7 @@ def split_protein(data_dir, data_save_dir):
 
   def process_one_file(poly_file):
     split_protein_traj(poly_file, data_save_dir)
+    # filter_split_protein_traj(poly_file, data_save_dir)
 
   now = time.time()
   for f in poly_file_dirs:
@@ -235,6 +242,7 @@ if __name__ == '__main__':
     elif command == 'hbv': # hepatitis B virus
       data_dir, data_save_dir = sys.argv[2:]
       hbv_to_h5(data_dir, data_save_dir)
+      
     elif command == 'protein': # protein
       data_dir, data_save_dir = sys.argv[2:]
       protein_to_h5(data_dir, data_save_dir)
@@ -244,6 +252,7 @@ if __name__ == '__main__':
     elif command == 'split_protein':
       data_dir, data_save_dir = sys.argv[2:]
       split_protein(data_dir, data_save_dir)
+      
     elif command == 'split_hbv':
       data_dir, data_save_dir = sys.argv[2:]
       split_hbv(data_dir, data_save_dir)

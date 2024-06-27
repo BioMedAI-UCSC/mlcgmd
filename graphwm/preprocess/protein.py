@@ -8,7 +8,7 @@ import mdtraj
 from utils import store_data
 
 
-def load_protein_traj(trajectoryOrig, topology):
+def load_protein_traj(trajectoryOrig, top):
     """
     atom_coords: float, (num_traj, num_atom, 3)
     atom_types: int, (num_atom,)
@@ -38,6 +38,7 @@ def split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200):
 
     full_path = data_dir + '/result/output_' + data_dir[len(data_dir) - 4:] + '.h5'
     traj = mdtraj.load(full_path)
+    traj = traj.atom_slice(traj.top.select('not name NA or not name CL'))
     
     n = traj.n_frames
     max_s = n - traj_len
@@ -183,6 +184,7 @@ def filter_split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200
 
     full_path = data_dir + '/result/output_' + data_dir[len(data_dir) - 4:] + '.h5'
     traj = mdtraj.load(full_path)
+    traj = traj.atom_slice(traj.top.select('not name NA or not name CL'))
     
     n = traj.n_frames                                   # number of frames in the trajectory
     max_s = n - traj_len                                # last index for split 
@@ -209,12 +211,12 @@ def filter_split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200
     dir_name = Path(data_dir).name
     save_path = Path(data_save_dir)
     
-    def filter_ions(idx, data):
-        # split = split.atom_slice(split.top.select('not water'))
-        data = data.atom_slice(data.top.select('not name NA or not name CL'))
-        # data = data.atom_slice(data.top.select('not type Cl-'))
-        print(f'Finished filtering ions for {idx}')
-        return data
+    # def filter_ions(idx, data):
+    #     # split = split.atom_slice(split.top.select('not water'))
+    #     data = data.atom_slice(data.top.select('not name NA or not name CL'))
+    #     # data = data.atom_slice(data.top.select('not type Cl-'))
+    #     print(f'Finished filtering ions for {idx}')
+    #     return data
     
     def save_one_split(idx, split):
         print(f'start split {idx}')
@@ -223,9 +225,9 @@ def filter_split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200
         print(p)
         if not Path(str(os.path.join(p, 'bond.h5'))).exists():
             try:
-                data = load_protein_traj(split, traj[0])
+                # split = filter_ions(idx, split)
+                data = load_protein_traj(split)
                 print('successfully loaded')
-                data = filter_ions(idx, data)
                 store_data(['position'], [data[0]], os.path.join(p, 'position.h5'))
                 store_data(['particle_type'], [data[1]], os.path.join(p, 'ptype.h5'))
                 store_data(['bond_indices'], [data[2]], os.path.join(p,'bond.h5'))

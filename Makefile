@@ -18,10 +18,6 @@ preprocess:
 sbatch-preprocess:
 	sbatch graphwm/preprocess.slurm
 
-# MAKE SURE TO DELETE ANY PARTIALLY CREATED FILES
-prepreprocess:
-	python graphwm/preprocess/preprocess.py ttrprot graphwm/datasets/proteins graphwm/datasets/
-
 # TRAIN
 # MAKE SURE TO CHECK THE TRAJECTORY LENGTHS (10k or 2k??) what is idx?
 setup:

@@ -1,0 +1,23 @@
+Shape of original file topology:  <mdtraj.Topology with 4 chains, 1418 residues, 16532 atoms, 16311 bonds>
+cg_u_pos
+cg_weights
+rollout_u_pos
+bonds
+n_bond
+position
+target
+particle_types
+n_particle
+keypoint
+n_keypoint
+cluster
+cg_bonds
+n_cg_bond
+time_elapsed
+model_params
+eval_cfg
+cg_bonds torch.Size([1262, 2])
+cluster tensor([521, 521, 521,  ..., 194, 176, 172]) torch.Size([16532])
+<mdtraj.Trajectory with 1 frames, 551 atoms, 1 residues, without unitcells>
+
+python preprocess.py split_protein ./../datasets/proteins/do_not_delete/ ./../datasets/protein_train_split_2
