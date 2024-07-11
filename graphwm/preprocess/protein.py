@@ -38,7 +38,15 @@ def split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200):
 
     full_path = data_dir + '/result/output_' + data_dir[len(data_dir) - 4:] + '.h5'
     traj = mdtraj.load(full_path)
-    traj = traj.atom_slice(traj.top.select('not name NA or not name CL'))
+    # traj = traj.atom_slice(traj.top.select('not name NA or not name CL'))
+    ion_residue_names = ['NA', 'CL', 'MG', 'CA', 'K']
+
+    # Select all atoms that are not part of the ion residues
+    non_ion_atoms = traj.topology.select(' or '.join([f'resname != {res}' for res in ion_residue_names]))
+
+    # Slice the trajectory to keep only non-ion atoms
+    traj = traj.atom_slice(non_ion_atoms)
+    
     
     n = traj.n_frames
     max_s = n - traj_len
@@ -183,8 +191,16 @@ def protein_train_test_split(data_dir, data_save_dir, n_split=0.9):
 def filter_split_protein_traj(data_dir, data_save_dir, nsplit=None, traj_len=200):
 
     full_path = data_dir + '/result/output_' + data_dir[len(data_dir) - 4:] + '.h5'
-    traj = mdtraj.load(full_path)
-    traj = traj.atom_slice(traj.top.select('not name NA or not name CL'))
+    traj = mdtraj.load(full_path)   
+    # traj = traj.atom_slice(traj.top.select('not name NA or not name CL'))
+    # Define the list of ion residue names you want to remove
+    ion_residue_names = ['NA', 'CL', 'MG', 'CA', 'K']
+
+    # Select all atoms that are not part of the ion residues
+    non_ion_atoms = traj.topology.select(' or '.join([f'resname != {res}' for res in ion_residue_names]))
+
+    # Slice the trajectory to keep only non-ion atoms
+    traj = traj.atom_slice(non_ion_atoms)
     
     n = traj.n_frames                                   # number of frames in the trajectory
     max_s = n - traj_len                                # last index for split 

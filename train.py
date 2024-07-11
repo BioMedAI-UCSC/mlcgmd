@@ -123,8 +123,10 @@ def run(cfg: DictConfig) -> None:
 
     # Load checkpoint (if exist)
     workdir = Path(cfg.workdir)
+    hydra.utils.log.info(f"Working Directory: {workdir}")
     if (workdir / 'last.ckpt').exists():
       ckpt = str(workdir / 'last.ckpt')
+      hydra.utils.log.info(f"Resuming from last checkpoint: {ckpt}")
     else:
       ckpts = list(workdir.glob('*.ckpt'))
       if len(ckpts) > 0:
@@ -153,8 +155,8 @@ def run(cfg: DictConfig) -> None:
     log_hyperparameters(trainer=trainer, model=model, cfg=cfg)
     
     print(hydra_dir)
-    print("model :", model)
-    print("datamodule : ", datamodule)
+    # print("model :", model)
+    # print("datamodule : ", datamodule)
     hydra.utils.log.info("Starting training!")
     trainer.fit(model=model, datamodule=datamodule)
 

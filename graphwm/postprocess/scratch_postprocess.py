@@ -8,13 +8,25 @@ import numpy as np
 
 
 # eval_protein_dir = "/projects/bbpa/coarseGrained/mlcgmd/graphwm/splits/protein/eval.txt"
-eval_protein_split = "/projects/bbpa/coarseGrained/mlcgmd/graphwm/datasets/protein_split/2JLE100"
+eval_protein_split = "/projects/bbpa/coarseGrained/mlcgmd/graphwm/datasets/protein_split_3/2JLE100"
 
-eval_protein_h5 = "/projects/bbpa/coarseGrained/mlcgmd/graphwm/datasets/proteins/2JLE/result/output_2JLE.h5"
+eval_protein_h5 = "/projects/bbpa/coarseGrained/mlcgmd/graphwm/datasets/proteins/do_not_delete/2JLE/result/output_2JLE.h5"
 
-pickle = pt.load('/projects/bbpa/coarseGrained/mlcgmd/mlcgmd_models/protein_pnr/nsteps5_stepsize_0.0001/2JLE100_20_2000rollout.pt', map_location=pt.device('cpu'))
+pickle = pt.load('/projects/bbpa/coarseGrained/mlcgmd/mlcgmd_models/protein_pnr/nsteps5_stepsize_0.0001/2JLE100_seed20_length3000.pt', map_location=pt.device('cpu'))
 
-original_topology = md.load_frame(eval_protein_h5,9999)
+original_topology = md.load_frame(eval_protein_h5,5)
+
+# original_topology = original_topology.atom_slice(original_topology.top.select('not name NA or not name CL'))
+
+# Define the list of ion residue names you want to remove
+ion_residue_names = ['NA', 'CL', 'MG', 'CA', 'K']
+
+# Select all atoms that are not part of the ion residues
+non_ion_atoms = original_topology.topology.select(' or '.join([f'resname != {res}' for res in ion_residue_names]))
+
+# Slice the trajectory to keep only non-ion atoms
+original_topology = original_topology.atom_slice(non_ion_atoms)
+
 # original_topology = load_hdf5(eval_protein_h5)
 # print("Shape of original file xyz: ", original_topology.xyz.shape)
 print("Shape of original file topology: ", original_topology.topology)
@@ -65,7 +77,7 @@ print(traj)
 
 
 
-traj.save("test2.pdb")
+traj.save("updated_2JLE100.pdb")
 
 print("")
 
@@ -79,21 +91,29 @@ atoms_bead_176 = [] # not too far (has 3 chlorine atoms)
 atoms_bead_142 = [] # a little far (has 6 sodium atoms)
 atoms_bead_114 = [] # close to main cluster (2 sodium, 5 chlorine)
 atoms_bead_391 = [] # within main cluster (no ions)
+atoms_bead_187 = []
+atoms_bead_10 = []
 
 for i, x in enumerate(pickle["cluster"]):
-    if(x == 176):
-        atoms_bead_176.append(particle_types[i])
-    if(x == 142):
-        atoms_bead_142.append(particle_types[i])
-    if(x == 114):
-        atoms_bead_114.append(particle_types[i])
-    if(x == 391):
-        atoms_bead_391.append(particle_types[i])
+    # if(x == 176):
+    #     atoms_bead_176.append(particle_types[i])
+    # if(x == 142):
+    #     atoms_bead_142.append(particle_types[i])
+    # if(x == 114):
+    #     atoms_bead_114.append(particle_types[i])
+    # if(x == 391):
+    #     atoms_bead_391.append(particle_types[i])
+    if(x == 187):
+        atoms_bead_187.append(particle_types[i])
+    if(x == 10):
+        atoms_bead_10.append(particle_types[i])
 
-print("far but not too far bead: ", atoms_bead_176, "\n")
-print("somewhat far bead: ", atoms_bead_142, "\n")
-print("close to cluster bead: ", atoms_bead_114, "\n")
-print("within range bead: ", atoms_bead_391, "\n")
+# print("far but not too far bead: ", atoms_bead_176, "\n")
+# print("somewhat far bead: ", atoms_bead_142, "\n")
+# print("close to cluster bead: ", atoms_bead_114, "\n")
+# print("within range bead: ", atoms_bead_391, "\n")
+print(atoms_bead_187)
+print(atoms_bead_10)
 
 
 

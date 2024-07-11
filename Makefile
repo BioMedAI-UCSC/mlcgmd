@@ -15,6 +15,11 @@ sbatch-ds:
 preprocess:
 	python graphwm/preprocess/preprocess.py split_protein ./graphwm/datasets/proteins/ ./graphwm/datasets/protein_train_ready
 
+eval-env:
+	srun --mem=64g --nodes=1 --ntasks-per-node=1 --cpus-per-task=4 --partition=gpuA100x4-interactive,gpuA40x4-interactive --account=bbpa-delta-gpu --gpus-per-node=1 --time=01:00:00 --pty /bin/bash
+eval-protein:
+	python eval.py --config-name eval_protein
+
 sbatch-preprocess:
 	sbatch graphwm/preprocess.slurm
 

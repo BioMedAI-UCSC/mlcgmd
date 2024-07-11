@@ -128,8 +128,8 @@ def split_protein(data_dir, data_save_dir):
 
   def process_one_file(poly_file):
     split_protein_traj(poly_file, data_save_dir)
-    # filter_split_protein_traj(poly_file, data_save_dir)
 
+    # filter_split_protein_traj(poly_file, data_save_dir)
   now = time.time()
   for f in poly_file_dirs:
     process_one_file(str(f))
